@@ -27,7 +27,7 @@ public class SimpleService implements Serializable{
         for (JobInfo jobInfo : serverList) {
             try {
                 RunShell.execShellMain(ConstantApp.shpath,jobInfo.getPath());
-                Thread.sleep(60000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 logger.error("InterruptedException:"+e.getMessage());
             }
