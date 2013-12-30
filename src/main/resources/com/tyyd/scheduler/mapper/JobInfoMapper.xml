@@ -3,7 +3,7 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tyyd.scheduler.dao.JobDao">
 	<insert id="saveJobInfo" parameterType="JobInfo">
-		INSERT INTO `job`(
+		INSERT INTO JOB(
 		`cpName`, `createTime`, `modifyTime`, `readTime`,
 		`flag`,
 		`timeExpress`, `path`, `extendsInfo`, `channel`)
@@ -14,7 +14,7 @@
 
 	<select id="getJobInfo" parameterType="JobInfo" resultType="JobInfo">
 		SELECT `id` as id, `cpName` as cpName, `createTime` as createTime, `modifyTime` as modifyTime, `readTime` as readTime, `flag` as flag,
-		`timeExpress` as timeExpress, `path` as path, `extendsInfo` as extendsInfo, `channel` as channel FROM `job` 
+		`timeExpress` as timeExpress, `path` as path, `extendsInfo` as extendsInfo, `channel` as channel FROM  JOB 
 		<trim prefix="WHERE" prefixOverrides="AND | OR">
 			<if test="id != null">
 				id = #{id}
@@ -24,11 +24,11 @@
 
 	<select id="getJobList" parameterType="JobInfo" resultType="java.util.HashMap">
 		SELECT `id` as id, `cpName` as cpName, `createTime` as createTime, `modifyTime` as modifyTime, `readTime` as readTime, `flag` as flag,
-		`timeExpress` as timeExpress, `path` as path, `extendsInfo` as extendsInfo, `channel` as channel FROM `job` 
+		`timeExpress` as timeExpress, `path` as path, `extendsInfo` as extendsInfo, `channel` as channel FROM  JOB 
 	</select>
 
 	<update id="updateJobInfo" parameterType="JobInfo">
-		UPDATE `job`
+		UPDATE  JOB
 		<trim prefix="SET" suffixOverrides=",">
 			<if test="cpName != null">
 				cpName = #{cpName},

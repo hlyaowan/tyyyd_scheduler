@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tyyd.scheduler.dao.UserDao">
-	<insert id="saveUserInfo" parameterType="UserInfo"> INSERT INTO `users`(`status`, `username`, `userpwd`) 
+	<insert id="saveUserInfo" parameterType="UserInfo"> INSERT INTO USERS (`status`, `username`, `userpwd`) 
 		VALUES(#{status},#{userName},#{userPwd})
 	</insert>
 
 
 	<select id="getUserInfo" parameterType="UserInfo" resultType="UserInfo">
-		SELECT `id` as id, `status` as status, `username` as userName, `userpwd` as userPwd FROM `users`
+		SELECT `id` as id, `status` as status, `username` as userName, `userpwd` as userPwd FROM USERS
 		<trim prefix="WHERE" prefixOverrides="AND | OR">
 			 <if test="userName != null ">
 				username = #{userName}

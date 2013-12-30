@@ -11,6 +11,6 @@
 		`PREV_FIRE_TIME` as prevFireTime, `PRIORITY` as priority,
 		`TRIGGER_STATE` as triggerState, `TRIGGER_TYPE` as triggerType,
 		`START_TIME` as startTime, `END_TIME` as endTime
-		FROM `qrtz_triggers`
+		FROM QRTZ_TRIGGERS
 	</select>
 </mapper>
