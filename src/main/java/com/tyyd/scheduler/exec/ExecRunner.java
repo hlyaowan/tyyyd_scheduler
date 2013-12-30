@@ -183,40 +183,46 @@ public class ExecRunner {
 	}
 	
 	//第一
-	private Process getProcess(String command) throws IOException {
-		Runtime rt = Runtime.getRuntime();
-		Process proc;
-		List<String> cmd = new ArrayList<String>(10);
+//	private Process getProcess(String command) throws IOException {
+//		Runtime rt = Runtime.getRuntime();
+//		Process proc;
+//		List<String> cmd = new ArrayList<String>(10);
+//
+//		String osName = System.getProperty("os.name");
+//		if (osName.equals("Windows NT") || osName.equals("Windows 2000")) {
+//			cmd.add(WINDOWS_NT_2000_COMMAND_1);
+//			cmd.add(WINDOWS_NT_2000_COMMAND_2);
+//		} else if (osName.equals("Windows 95") || osName.equals("Windows 98")
+//				|| osName.equals("Windows ME")) {
+//			cmd.add(WINDOWS_9X_ME_COMMAND_1);
+//			cmd.add(WINDOWS_9X_ME_COMMAND_2);
+//		} else {
+////			cmd.add("/bin/sh");
+////			cmd.add("-c");
+//		}
+//		
+//		String[] cms = StringUtils.split(command, PARAM_SPLIT);
+//		
+//		if (cms != null && cms.length > 0) {
+//			for (int i = 0;i < cms.length;i ++) {
+//				cmd.add(cms[i]);
+//			}
+//		}
+//		// Execute the command and start the two output gobblers
+//		if (cmd != null && cmd.size() > 0) {
+//			proc = rt.exec(cmd.toArray(new String[]{}));
+//		} else {
+//			throw new IOException("Insufficient commands!");
+//		}
+//		
+//		return proc;
+//	}
 
-		String osName = System.getProperty("os.name");
-		if (osName.equals("Windows NT") || osName.equals("Windows 2000")) {
-			cmd.add(WINDOWS_NT_2000_COMMAND_1);
-			cmd.add(WINDOWS_NT_2000_COMMAND_2);
-		} else if (osName.equals("Windows 95") || osName.equals("Windows 98")
-				|| osName.equals("Windows ME")) {
-			cmd.add(WINDOWS_9X_ME_COMMAND_1);
-			cmd.add(WINDOWS_9X_ME_COMMAND_2);
-		} else {
-//			cmd.add("/bin/sh");
-//			cmd.add("-c");
-		}
-		
-		String[] cms = StringUtils.split(command, PARAM_SPLIT);
-		
-		if (cms != null && cms.length > 0) {
-			for (int i = 0;i < cms.length;i ++) {
-				cmd.add(cms[i]);
-			}
-		}
-		// Execute the command and start the two output gobblers
-		if (cmd != null && cmd.size() > 0) {
-			proc = rt.exec(cmd.toArray(new String[]{}));
-		} else {
-			throw new IOException("Insufficient commands!");
-		}
-		
-		return proc;
-	}
+	private Process getProcess(String command) throws IOException {
+        Runtime rt = Runtime.getRuntime();
+        Process proc= rt.exec(command);
+        return proc;
+    }
 	
 	/**
 	 * Returns the error string if exec(String) was invoked.
