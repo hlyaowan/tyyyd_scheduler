@@ -1,9 +1,10 @@
-var _dynamicPath = "http://127.0.0.1:8080/";
-var _frontPath = "http://127.0.0.1/";
-var _frontPath_urlRewriter_baseUrl="http://127.0.0.1:8080/";
+//var _dynamicPath = "http://127.0.0.1:8080/";
+//var _frontPath = "http://127.0.0.1/";
+//var _frontPath_urlRewriter_baseUrl="http://127.0.0.1:8080/";
 
-//var _dynamicPath ="http://61.130.247.180:9542/tyweb/";
-//var _frontPath = "http://61.130.247.180:9542/tyweb/html/";
+var _dynamicPath ="http://192.168.10.107:8080/";
+var _frontPath = "http://192.168.10.107:8080/";
+var _frontPath_urlRewriter_baseUrl="http://192.168.10.107:8080/";
 
 var goMailUrl="http://elive.webmail.189.cn/webadmin/vnet_mail.htmls?cmd_ID=0";
 	
