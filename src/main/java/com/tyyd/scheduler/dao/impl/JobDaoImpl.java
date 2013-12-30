@@ -1,6 +1,7 @@
 package com.tyyd.scheduler.dao.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
@@ -13,8 +14,8 @@ public class JobDaoImpl extends MybatisTemplate implements JobDao{
     
     private static final String NAMESPACE = JobDao.class.getName().concat(".");
     
-    public List<JobInfo> getJobInfoList(JobInfo condition) {
-        return super.<JobInfo> getList(NAMESPACE.concat("getJobList"), condition);
+    public List<Map<String, Object>> getJobInfoList(JobInfo condition) {
+        return super.<Map<String, Object>> getList(NAMESPACE.concat("getJobList"), condition);
     }
 
     public JobInfo getJobInfo(JobInfo condition) {
