@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>天翼阅读,开卷有翼 - 数据调度管理系统</title>
+<title>天翼阅读,开卷有翼 - 调度系统</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <link type="text/css" href="${rc.contextPath}/css/recharge/global.css" rel="stylesheet" />
+<script type="text/javascript" src="${rc.contextPath}/js/jquery.js" > </script>
 </head>
 <body>
-<div id="header">
-	#if($userInfo)
-<!--充值中心 头文件 -->
+<div id="header"> #if($userInfo)
+  <!--充值中心 头文件 -->
   <div id="header_top">
     <div class="wrap">
       <div class="login">
@@ -18,7 +18,6 @@
           <li>
             <label>欢迎你<font color="red">${userInfo.userName}</font>登录数据调度管理平台！</label>
           </li>
-          
         </ul>
         <div class="lg_wel"></div>
       </div>
@@ -45,43 +44,63 @@
 </div>
 <div id="mainNav" class="wrap">
   <ul class="clearfix">
-      <li><a href="${rc.contextPath}/index.htm">数据调度首页</a></li>
-    <li><a href="${rc.contextPath}/admin/manage.htm" class="current">数据调度管理</a></li>
-    <li><a href="${rc.contextPath}/admin/config.htm">数据调度概况</a></li>
-    <li><a href="${rc.contextPath}/admin/server_info.htm">服务管理</a></li>
+    <li><a href="${rc.contextPath}/index.htm">数据调度首页</a></li>
+    <li><a href="${rc.contextPath}/admin/manage.htm">数据调度管理</a></li>
+    <li><a href="${rc.contextPath}/admin/config.htm">数据调度配置</a></li>
+    <li><a href="${rc.contextPath}/admin/server_info.htm" class="current">服务管理</a></li>
   </ul>
 </div>
 <div class="main_box clearfix">
-  <div class="crumb"> <span class="cube"></span>您的位置：<a href="/index.htm">天翼阅读首页</a>&gt;&gt;个人中心&gt;&gt;数据调度管理 </div>
+  <div class="crumb"> <span class="cube"></span>您的位置：<a href="/index.htm">天翼阅读首页</a>&gt;&gt;个人中心&gt;&gt;数据调度配置 </div>
   <div class="aside_nav fl">
     <dl style="border-top: 1px solid #cacccb;">
-      <dd class="account current"><a href="${rc.contextPath}/admin/manage.htm">我的账户</a><span></span></dd>
-      <dd class="account"><a href="${rc.contextPath}/admin/scheduler.htm">数据调度管理</a><span></span></dd>
-	   <dd class="account"><a href="${rc.contextPath}/admin/add_trigger_group.htm">添加调度应用</a><span></span></dd>
+      <dd class="order current"><a href="${rc.contextPath}/admin/config.htm">服务器信息</a><span></span></dd>
     </dl>
   </div>
   <div class="containBox fl">
-    <!--我的账户 -->
     <div class="account_Wrap clearfix">
-      <div class="fl userInfo"> <img src="http://read.189.cn/images/recharge/p48.jpg" />
-        <p>${userInfo.userName}</p>
+      <div class="recordList">
+        <h3>登录用户<span> <span id="score" style="margin-left:5px;color:red;"><b>${userInfo.userName}</b></span> </h3>
       </div>
-      <div class="fl account_mainBox">
-        <p>欢迎 来到天翼阅读数据调度中心！</p>
-        <p><span class="viewDetail arrowBtn">详情</span></p>
-        <div class="ydDetail" style="display:none;">
-          <p style="color:#b5b5b5;">角色：&nbsp;&nbsp; ${role}</p>
-        </div>
-        </div>
     </div>
     <div class="account_Wrap clearfix" style="border:0;">
-      <div class="recordList" id="recordList">
-        <h3>系统介绍</h3>
-        <div class="pageList clearfix" style="text-align:left;"> 
-        	1.对能力开放平台的现有服务器的数据调度进行错误信息查看，能够监管存在的服务器的数据调度问题。<br/>
-        	2.该系统对数据调度进行分类汇总，分析访问量，分析存在的安全漏洞，分析错误信息，随时反馈给管理员审核。<br/>
-        	3.可以及时的分配监控的服务器，分配监管的权限，查看jboss运行情况！
-         </div>
+      <div class="recordList">
+        <h3 style="border:0;">积分获取规则说明：</h3>
+        <table style="border:solid 1px #E4EDF3">
+          <tr style="background-color:#E2EEF6">
+            <td width="135">机器配置</td>
+            <td width="439" class="border_left">参数</td>
+          </tr>
+          <tr>
+            <td>Java的运行环境版本：</td>
+            <td class="border_left">${java_version}</td>
+          </tr>
+          <tr>
+            <td>临时文件路径</td>
+            <td class="border_left">${java_io_tmpdir}</td>
+          </tr>
+          <tr>
+            <td>操作系统</td>
+            <td class="border_left">${os_name}</td>
+          </tr>
+          <tr>
+            <td>操作系统的构架</td>
+            <td class="border_left">${os_arch}</td>
+          </tr>
+          <tr>
+            <td>操作系统的版本</td>
+            <td class="border_left">${os_version}</td>
+          </tr>
+		    <tr>
+            <td>用户的主目录</td>
+            <td class="border_left">${os_user_home}</td>
+          </tr>
+		  <tr>
+            <td>cpu信息核心数</td>
+            <td class="border_left">${os_cpus}</td>
+          </tr>
+        </table>
+        <p style="margin-top:20px;">说明：请求服务器的相关的参数和应用场景。</p>
       </div>
     </div>
   </div>

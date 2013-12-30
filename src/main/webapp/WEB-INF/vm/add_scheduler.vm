@@ -47,8 +47,8 @@
   <ul class="clearfix">
       <li><a href="${rc.contextPath}/index.htm">数据调度首页</a></li>
     <li><a href="${rc.contextPath}/admin/manage.htm" class="current">数据调度管理</a></li>
-    <li><a href="#">数据调度概况</a></li>
-    <li><a href="#">服务管理</a></li>
+    <li><a href="${rc.contextPath}/admin/config.htm">数据调度概况</a></li>
+    <li><a href="${rc.contextPath}/admin/server_info.htm">服务管理</a></li>
   </ul>
 </div>
 <div class="main_box clearfix">

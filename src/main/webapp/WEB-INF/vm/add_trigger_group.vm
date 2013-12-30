@@ -57,15 +57,17 @@
     <dl style="border-top: 1px solid #cacccb;">
      <dd class="account "><a href="${rc.contextPath}/admin/manage.htm">我的账户</a><span></span></dd>
       <dd class="account"><a href="${rc.contextPath}/admin/scheduler.htm">数据调度管理</a><span></span></dd>
-	   <dd class="order current"><a href="${rc.contextPath}/admin/add_scheduler.htm">添加调度应用</a><span></span></dd>
+	   <dd class="order current"><a href="${rc.contextPath}/admin/add_trigger_group.htm">添加调度应用</a><span></span></dd>
     </dl>
   </div>
  <div class="containBox fl">
 		
-<h2 class="con_title"><strong>修改任务调度工作</strong> </h2>
+<h2 class="con_title"><strong>添加任务调度工作</strong> </h2>
+	
+
 		<div class="stepsMain">
 			
-			<form id="form" name="form" method="post" action="/admin/modifysch.htm">
+			<form id="form" name="form" method="post" action="/admin/add_group.htm">
 			<div class="infoList" id="ydqcz">
 				<dl class="conList mb10 clearfix">
 					<dt>登录账号：</dt>
@@ -82,14 +84,28 @@
 					</dd>
 				</dl>
 				<dl class="conList mb10 clearfix">
+					<dt>应用调度器名称：</dt>
+					<dd><input class="input_text" type="text" id="triggerName" name="triggerName"  placeholder="请输入应用名称" maxlength="30"/></dd>
+				</dl>
+				<dl class="conList mb10 clearfix">
+					<dt>应用调度器名称：</dt>
+					<dd>
+						<select name="groupName" id="select" class="input_text" style="width:100px;">
+                          <option value="group_guqiang">古羌</option>
+                          <option value="group_hongxiu">红袖</option>
+                          <option value="group_zhulang">逐浪</option>
+                          <option value="group_netway">网文</option>
+                        </select>
+					</dd>
+				</dl>
+				<dl class="conList mb10 clearfix">
 					<dt>调度器表达式：</dt>
 					<dd>
 						<input class="input_text" type="text"  id="cronExpression" name="cronExpression" placeholder="格式：0/10 * * ? * * *"  value="" maxlength="30"/>
-						<input type="hidden" name="group" value="${group}" />
-						<input type="hidden" name="triggerName" value="${triggerName}" />
+		
 					</dd>
 				</dl>
-				<input type="submit" class="button_bg"  value="修改"/>
+				<input type="submit" class="btn_submit submitYDQ" />
 			</div>
 			</form>
 			<div class="ydqmsgBox">

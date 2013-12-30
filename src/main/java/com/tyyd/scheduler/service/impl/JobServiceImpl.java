@@ -1,6 +1,7 @@
 package com.tyyd.scheduler.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ public class JobServiceImpl implements JobService {
     @Autowired
     private JobDao jobDao;
 
-    public List<JobInfo> getJobInfoList(JobInfo condition) {
+    public List<Map<String, Object>> getJobInfoList(JobInfo condition) {
         return jobDao.getJobInfoList(condition);
     }
 

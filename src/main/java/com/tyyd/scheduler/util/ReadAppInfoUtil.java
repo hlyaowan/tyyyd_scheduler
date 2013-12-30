@@ -29,7 +29,7 @@ public class ReadAppInfoUtil {
     private static long       lastModifyTime = 0;
 
     // 间隔读取时间，单位毫秒
-    private static final long JIANGETIME     = 60 * 1000;
+    private static final long JIANGETIME     = 1* 1000;
 
     public static Log         log            = LogFactory.getLog(FileUtil.class);
 
@@ -86,7 +86,7 @@ public class ReadAppInfoUtil {
                 model.setTimeExpress(elemodel.getChildText("timeExpress"));
                 list.add(model);
             }
-            System.out.println("list:" + list.size());
+//            System.out.println("list:" + list.size());
             return list;
         } catch (Exception e) {
             return null;

@@ -6,41 +6,6 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link type="text/css" href="${rc.contextPath}/css/recharge/global.css" rel="stylesheet" />
 <script type="text/javascript" src="${rc.contextPath}/js/jquery.js" > </script>
-<script type="text/javascript">
-		function doCmd(state,triggerName,group,triggerState){
-			
-			//if(state == 'pause' && triggerState=='PAUSED'){
-			//	alert("该Trigger己经暂停！");
-			//	return;
-			//}
-			
-		   // if(state == 'resume' && triggerState != 'PAUSED'){
-			//	alert("该Trigger正在运行中！");
-			//	return;
-			//}
-			
-			//客户端两次编码，服务端再解码，否测中文乱码 
-			triggerName = encodeURIComponent(encodeURIComponent(triggerName));
-			group = encodeURIComponent(encodeURIComponent(group));
-            $.ajax({
-                url: '${rc.contextPath}/admin/operate.htm?action='+state+'&triggerName='+triggerName+'&group='+group,
-                type: 'post',
-                //dataType: 'xml',
-               // timeout: 3000,
-                error: function(){
-                  // alert("执行失败！");		
-                },
-                success: function(xml){
-					if (xml == 0) {
-						//alert("执行成功！");
-						window.location.reload();
-					}else{
-						//alert("执行失败！");	
-					}		   
-                }
-            });
-		}
-		</script>
 </head>
 <body>
 <div id="header">
@@ -82,18 +47,16 @@
 <div id="mainNav" class="wrap">
   <ul class="clearfix">
       <li><a href="${rc.contextPath}/index.htm">数据调度首页</a></li>
-    <li><a href="${rc.contextPath}/admin/manage.htm" class="current">数据调度管理</a></li>
-    <li><a href="${rc.contextPath}/admin/config.htm">数据调度概况</a></li>
+    <li><a href="${rc.contextPath}/admin/manage.htm">数据调度管理</a></li>
+    <li><a href="${rc.contextPath}/admin/config.htm" class="current"">数据调度配置</a></li>
     <li><a href="${rc.contextPath}/admin/server_info.htm">服务管理</a></li>
   </ul>
 </div>
 <div class="main_box clearfix">
-  <div class="crumb"> <span class="cube"></span>您的位置：<a href="/index.htm">天翼阅读首页</a>&gt;&gt;个人中心&gt;&gt;数据调度管理 </div>
+  <div class="crumb"> <span class="cube"></span>您的位置：<a href="/index.htm">天翼阅读首页</a>&gt;&gt;个人中心&gt;&gt;数据调度配置 </div>
   <div class="aside_nav fl">
     <dl style="border-top: 1px solid #cacccb;">
-     <dd class="account "><a href="${rc.contextPath}/admin/manage.htm">我的账户</a><span></span></dd>
-     <dd class="order current"><a href="${rc.contextPath}/admin/scheduler.htm">数据调度管理</a><span></span></dd>
-	  <dd class="account"><a href="${rc.contextPath}/admin/add_trigger_group.htm">添加调度应用</a><span></span></dd>
+     <dd class="order current"><a href="${rc.contextPath}/admin/config.htm">配置管理</a><span></span></dd>
     </dl>
   </div>
   <div class="containBox fl">
@@ -116,39 +79,23 @@
         <h3>今天数据调度记录</h3>
         <table>
           <tr>
-            <th>调度名称</th>
-            <th>调度组</th>
-            <th>下次执行时间</th>
-            <th>上次执行时间</th>
-            <th>优先级</th>
-			<th>Trigger 状态</th>
-			<th>Trigger 类型</th>
-			<th>开始时间</th>
-			<th>结束时间</th>
+            <th>编号</th>
+            <th>应用名称</th>
+            <th>路径</th>
+            <th>渠道</th>
+            <th>时间</th>
 			<th>动作命令</th>
           </tr>
          #foreach( $job in $jobs ) 
           <tr>
-            <td>${job.displayName}</td>
-            <td>${job.triggerGroup}</td>
-            <td>${job.nextFireTime}</td>
-            <td>${job.prevFireTime}</td>
-            <td>${job.priority}</td>
-			<td>${job.triggerState}</td>
-			<td>${job.triggerType}</td>
-			<td>${job.startTime}</td>
-			<td>${job.endTime}</td>
+            <td>${job.id}</td>
+            <td>${job.cpName}</td>
+            <td><font color="red">${job.path}</font></td>
+            <td>${job.channel}</td>
+            <td>${job.createTime}</td>
 			<td>
-				<input type="button" id="pause" value="暂停" onclick="doCmd('pause','${job.triggerName}','${job.triggerGroup}','${job.triggerState}')">
-						<input type="button" id="resume" value="恢复" onclick="doCmd('resume','${job.triggerName}','${job.triggerGroup}','${job.triggerState}')">
-						<input type="button" id="remove" value="删除" onclick="doCmd('remove','${job.triggerName}','${job.triggerGroup}','${job.triggerState}')">
-						
-						<form name="form2" action="/admin/modify.htm" method="post">
-							<input type="hidden" name="triggerName" value="${job.triggerName}" />
-							<input type="hidden" name="group" value="${job.triggerGroup}" />
-						<input type="submit" id="modify" value="修改时间" />
-						</form>
-</td>
+				修改
+			</td>
           </tr>
           #end
         </table>
