@@ -19,7 +19,7 @@
 			</list>
 		</property>
 	</bean>
-	<!-- 
+	
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
 		init-method="init" destroy-method="close" lazy-init="true">
 		<property name="url">
@@ -42,8 +42,9 @@
 		<property name="removeAbandonedTimeout" value="600" />
 		<property name="logAbandoned" value="true" />
 	</bean>
-	 -->
-	<!-- 数据源定义,使用c3p0 连接池 -->
+
+	 
+	<!-- 数据源定义,使用c3p0 连接池
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 		<property name="driverClass" value="${jdbc.driverClassName}" />	
 		<property name="jdbcUrl" value="${jdbc.url}" />	
@@ -55,5 +56,5 @@
 		<property name="acquireIncrement" value="${cpool.acquireIncrement}" /> 
 	    <property name="maxIdleTime" value="${cpool.maxIdleTime}"/>   
 	</bean>	
-	
+	 -->
 </beans>
