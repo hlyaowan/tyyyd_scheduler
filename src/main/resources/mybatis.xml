@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="UserInfo" type="com.tyyd.scheduler.model.UserInfo" />
+		<typeAlias alias="JobInfo" type="com.tyyd.scheduler.model.JobInfo" />
+		<typeAlias alias="TriggerInfo" type="com.tyyd.scheduler.model.TriggerInfo" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/tyyd/scheduler/mapper/UserInfoMapper.xml" />
+		<mapper resource="com/tyyd/scheduler/mapper/JobInfoMapper.xml" />
+		<mapper resource="com/tyyd/scheduler/mapper/TriggerInfoMapper.xml" />
+	</mappers>
+</configuration>	

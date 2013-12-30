@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>天翼阅读,开卷有翼 - 数据调度管理</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link type="text/css" href="${rc.contextPath}/css/recharge/global.css" rel="stylesheet" />
+</head>
+<body>
+<div id="header">
+#if($userInfo)
+<!--充值中心 头文件 -->
+  <div id="header_top">
+    <div class="wrap">
+      <div class="login">
+        <div style=" width:100px; float:left;height: 30px;line-height: 30px;"><a href="http://read.189.cn">天翼首页</a>&nbsp;</div>
+        <ul class="lg_in">
+          <li>
+            <label>欢迎你<font color="red">${userInfo.userName}</font>登录数据调度管理平台！</label>
+          </li>
+          
+        </ul>
+        <div class="lg_wel"></div>
+      </div>
+      <ul class="login_bind">
+        <li class="lb_bak"><a href="${rc.contextPath}/loginOut.htm">退出系统</a></li>
+        <li class="lb_tit">快捷登录:</li>
+        <li><a class="sinaLogin" title="新浪"><i class="weibo"></i> </a></li>
+        <li><a class="tencentLogin" title="腾讯"><i class="sina"></i> </a> </li>
+        <li><a class="renrenLogin" title="人人"><i class="renren"></i> </a> </li>
+      </ul>
+    </div>
+  </div>
+  #end
+  
+  <!--充值中心 头文件 -->
+  <div id="header_main">
+    <div class="header_mainBox clearfix">
+      <div class="wrap clearfix">
+        <h1 class="fl" id="logo"><img src="${rc.contextPath}/images/recharge/logo.png" alt="天翼阅读充值中心"></h1>
+        <p class="fr faq"> <a href="help.html">系统遇到问题？</a><br>
+          <span class="user_info" id="balance"></span> </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mainNav" class="wrap">
+  <ul class="clearfix">
+    <li><a href="${rc.contextPath}/index.htm" class="current">数据调度首页</a></li>
+    <li><a href="${rc.contextPath}/admin/manage.htm">数据调度管理</a></li>
+    <li><a href="#">数据调度概况</a></li>
+    <li><a href="#">服务管理</a></li>
+  </ul>
+</div>
+<div class="main_box">
+  <div class="index_banner"> <img src="${rc.contextPath}/images/recharge/banner_index.jpg" alt="快速便捷的充值体验,全新的充值中心给你不一样的感觉"> <a href="javascript:;" class="btn_indexRecharge">登录</a> </div>
+  <div class="index_info clearfix">
+    <dl class="ydcz fl">
+      <dt><div style="color:#FF0000;font-weight:700pt">数据调度查看</div></dt>
+      <dd>对能力开放平台的现有服务器的数据调度进行错误信息查看，能够监管存在的服务器的数据调度问题。</dd>
+      <dd class="icon"></dd>
+    </dl>
+    <dl class="czfs fl">
+      <dt><div style="color:#FF0000;font-weight:700pt">数据调度分析</div></dt>
+      <dd>该系统对数据调度进行分类汇总，分析访问量，分析存在的安全漏洞，分析错误信息，随时反馈给管理员审核。</dd>
+      <dd class="icon"></dd>
+    </dl>
+    <dl class="more fl">
+      <dt><div style="color:#FF0000;font-weight:700pt">服务配置</div></dt>
+      <dd>可以及时的分配监控的服务器，分配监管的权限，查看jboss运行情况！</dd>
+      <dd class="icon"></dd>
+    </dl>
+  </div>
+</div>
+<div id="footer">
+  <!-- 充值中心 -脚-->
+  <div class="footer_wrap"> 版权所有(&copy;) 2012 天翼阅读文化传播有限公司 </div>
+</div>
+<script type="text/javascript" src="${rc.contextPath}/js/jquery.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/util.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/server.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/cz_global.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/cz_login.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<appList>
+		<appInfo>
+			<id>1</id>
+			<cpName>古羌</cpName>
+			<createTime>2013-12-25 15:39:14</createTime>
+			<modifyTime>2013-12-25 15:39:14</modifyTime>
+			<readTime>2013-12-25 15:39:14</readTime>
+			<flag>1</flag>
+			<timeExpress>0/20 * 3-23 * * ?</timeExpress>
+			<path>/home/taobao/datax/jobs/guqiangreader_to_guqiangwriter_1387509831335.xml</path>
+			<extendsInfo></extendsInfo>
+			<channel>guqiang</channel>
+		</appInfo>
+		<appInfo>
+			<id>2</id>
+			<cpName>红袖</cpName>
+			<createTime>2013-12-25 15:39:14</createTime>
+			<modifyTime>2013-12-25 15:39:14</modifyTime>
+			<readTime>2013-12-25 15:39:14</readTime>
+			<flag>1</flag>
+			<timeExpress>0 0 7 * * ?</timeExpress>
+			<path>/home/taobao/datax/jobs/hongxiureader_to_hongxiuwriter_1387500928254.xml</path>
+			<extendsInfo></extendsInfo>
+			<channel>hongxiu</channel>
+		</appInfo>
+		<appInfo>
+			<id>3</id>
+			<cpName>北京网文</cpName>
+			<createTime>2013-12-25 15:39:14</createTime>
+			<modifyTime>2013-12-25 15:39:14</modifyTime>
+			<readTime>2013-12-25 15:39:14</readTime>
+			<flag>1</flag>
+			<timeExpress>0 0 7 * * ?</timeExpress>
+			<path>/home/taobao/datax/jobs/netwayreader_to_netwaywriter_1387509694480.xml</path>
+			<extendsInfo></extendsInfo>
+			<channel>netway</channel>
+		</appInfo>
+		<appInfo>
+			<id>4</id>
+			<cpName>逐浪网</cpName>
+			<createTime>2013-12-25 15:39:14</createTime>
+			<modifyTime>2013-12-25 15:39:14</modifyTime>
+			<readTime>2013-12-25 15:39:14</readTime>
+			<flag>1</flag>
+			<timeExpress>0 0 7 * * ?</timeExpress>
+			<path>/home/taobao/datax/jobs/zhulangreader_to_zhulangwriter_1387463321519.xml</path>
+			<extendsInfo></extendsInfo>
+			<channel>zhulang</channel>
+		</appInfo>
+	</appList>
+</response>

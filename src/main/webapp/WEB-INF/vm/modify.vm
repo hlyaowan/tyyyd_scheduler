@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>天翼阅读,开卷有翼 - 调度系统</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link type="text/css" href="${rc.contextPath}/css/recharge/global.css" rel="stylesheet" />
+</head>
+<body>
+<div id="header">
+	#if($userInfo)
+<!--充值中心 头文件 -->
+  <div id="header_top">
+    <div class="wrap">
+      <div class="login">
+        <div style=" width:100px; float:left;height: 30px;line-height: 30px;"><a href="http://read.189.cn">天翼首页</a>&nbsp;</div>
+        <ul class="lg_in">
+          <li>
+            <label>欢迎你<font color="red">${userInfo.userName}</font>登录数据调度管理平台！</label>
+          </li>
+          
+        </ul>
+        <div class="lg_wel"></div>
+      </div>
+      <ul class="login_bind">
+        <li class="lb_bak"><a href="${rc.contextPath}/loginOut.htm">退出系统</a></li>
+        <li class="lb_tit">快捷登录:</li>
+        <li><a class="sinaLogin" title="新浪"><i class="weibo"></i> </a></li>
+        <li><a class="tencentLogin" title="腾讯"><i class="sina"></i> </a> </li>
+        <li><a class="renrenLogin" title="人人"><i class="renren"></i> </a> </li>
+      </ul>
+    </div>
+  </div>
+  #end
+  <!--充值中心 头文件 -->
+  <div id="header_main">
+    <div class="header_mainBox clearfix">
+      <div class="wrap clearfix">
+        <h1 class="fl" id="logo"><img src="${rc.contextPath}/images/recharge/logo.png" alt="天翼阅读充值中心"></h1>
+        <p class="fr faq"> <a href="${rc.contextPath}/help.htm">系统遇到问题？</a><br>
+          <span class="user_info" id="balance"></span> </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mainNav" class="wrap">
+  <ul class="clearfix">
+      <li><a href="${rc.contextPath}/index.htm">数据调度首页</a></li>
+    <li><a href="${rc.contextPath}/admin/manage.htm" class="current">数据调度管理</a></li>
+    <li><a href="#">数据调度概况</a></li>
+    <li><a href="#">服务管理</a></li>
+  </ul>
+</div>
+<div class="main_box clearfix">
+  <div class="crumb"> <span class="cube"></span>您的位置：<a href="/index.htm">天翼阅读首页</a>&gt;&gt;个人中心&gt;&gt;数据调度管理 </div>
+  <div class="aside_nav fl">
+    <dl style="border-top: 1px solid #cacccb;">
+     <dd class="account "><a href="${rc.contextPath}/admin/manage.htm">我的账户</a><span></span></dd>
+      <dd class="account"><a href="${rc.contextPath}/admin/scheduler.htm">数据调度管理</a><span></span></dd>
+	   <dd class="order current"><a href="${rc.contextPath}/admin/add_scheduler.htm">添加调度应用</a><span></span></dd>
+    </dl>
+  </div>
+ <div class="containBox fl">
+		
+<h2 class="con_title"><strong>修改任务调度工作</strong> </h2>
+		<div class="stepsMain">
+			
+			<form id="form" name="form" method="post" action="/admin/modifysch.htm">
+			<div class="infoList" id="ydqcz">
+				<dl class="conList mb10 clearfix">
+					<dt>登录账号：</dt>
+					<dd id="account" data-account="${userInfo.userName}">${userInfo.userName}</dd>
+					<dd>
+						<div class="info_yd">
+							<p class="info_title">Cron Trigger</p>
+							<p class="info_subTitle">&nbsp;</p>
+							<p class="info_detail">
+								Cron Trigger功能比较强大，Cron表达式写法多种多样，我没有找到一个比较通用的方式去转换所有Cron表达式， 在此只列起一几种比较简单的情况，希望能起到一个抛砖引玉作用，更多具体情况请参加相关文档。如果你有什么 好的方式也请告知，互相学习。。
+							</p>
+
+						</div>
+					</dd>
+				</dl>
+				<dl class="conList mb10 clearfix">
+					<dt>调度器表达式：</dt>
+					<dd>
+						<input class="input_text" type="text"  id="cronExpression" name="cronExpression" placeholder="格式：0/10 * * ? * * *"  value="" maxlength="30"/>
+						<input type="hidden" name="group" value="${group}" />
+						<input type="hidden" name="triggerName" value="${triggerName}" />
+					</dd>
+				</dl>
+				<input type="submit" class="button_bg"  value="修改"/>
+			</div>
+			</form>
+			<div class="ydqmsgBox">
+				<h6>调度任务监控管理：</h6>
+    			<p>Cron表达式(如"0/10 * * ? * * *"，每10秒中执行调试一次)，对使用者要求比较，要会写Cron表达式，实际项目中不适用</p>
+			</div>
+		</div>	</div>
+
+</div>
+
+<div id="footer">
+  <!-- 充值中心 -脚-->
+  <div class="footer_wrap"> 版权所有(&copy;) 2012 天翼阅读文化传播有限公司 </div>
+</div>
+<script type="text/javascript" src="${rc.contextPath}/js/jquery.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/util.js"></script>
+<script type="text/javascript" src="${rc.contextPath}/js/cz_global.js"></script>
+</body>
+</html>

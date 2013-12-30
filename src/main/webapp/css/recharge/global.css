@@ -1,0 +1,312 @@
+/*=======================================
+Style for 
+Version: 1.0.0
+Author: Kevin Chan
+Creat Time: 2013.06.08
+=======================================*/
+
+/*======================================
+ Reset,Common,Header,Main Frame,Footer,
+ Index
+======================================*/
+
+
+/*===== Reset =====*/
+html{}
+body,div,dl,dt,dd,ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,button,caption,cite,code,dfn,em,input,optgroup,option,select,strong,textarea,th,var{font:inherit}
+del,ins{text-decoration:none}
+li{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:baseline}
+sub{vertical-align:baseline}
+legend{color:#000}
+input,button,select,textarea{outline:none}
+/*body,button,input,select,textarea { font: 12px/1.5 tahoma, "microsoft yahei", "\5FAE\8F6F\96C5\9ED1" }*/
+body,button,input,select,textarea { font: 12px/1.5 tahoma, "宋体";}
+button,input,select,textarea { font-size: 100% }
+button,input[type="button"],input[type="reset"],input[type="submit"] { cursor: pointer; -webkit-appearance: button }
+button::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner {border:none; padding:0;}
+textarea{resize:none}
+a{ color:#666; text-decoration:none; outline:none;}a:hover{ color:#f50; text-decoration:underline;}
+/*a:active{ background:none;}*/
+
+/*===== Common =====*/
+body {background: url(../../images/recharge/bg_body.jpg); word-wrap:break-word; word-break:normal; color:#666;}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+.wrap {margin: 0 auto; width: 956px;}
+.fl{float: left; _display: inline;}
+.fr{float: right; _display: inline;}
+.h48{ height: 48px;}
+.h30{ height: 30px;}
+.mb15{ margin-bottom: 15px;}
+.mb10{ margin-bottom: 10px;}
+.c2c6084{color:#2c6084}
+.c0024ff{ color: #0024ff;}
+.mask{ width:100%; background:#000; position:absolute; left:0; top:0; z-index:9998; filter:alpha(opacity=50); -moz-opacity:0.50; opacity:0.50;}
+.winBox{ position: absolute; top: 0; left: 50%; z-index: 9999;}
+.winBox_btn{ display: inline-block; _display: inline; _zoom:1; width: 113px; height: 30px; background:#935519; font-size: 14px; line-height: 30px; text-align: center; color: #fff; margin:0 10px;}
+.winBox_btn:hover{color: #fff; text-decoration: none;}
+.winBox_btnOff{ background: #cfb59d; color: #744211;}
+.winBox_btnOff:hover{ color: #744211; text-decoration: none;}
+
+
+/*===== Header =====*/
+#header{ width:100%; background: #f5f5f5; }
+#header_top{width:100%; height:30px; box-shadow:0 2px 3px 0px #bbbab7; background:url(../../images/recharge/bg_headTop.jpg) repeat-x; position:relative; z-index:1;}
+.button_bg{width:138px; height:35px; box-shadow:0 2px 3px 0px #bbbab7; background:url(../../images/recharge/bg_2.png) ; }
+
+.login{ float:left; width:600px;}
+.lg_in{ float:left; height:30px;}
+.lg_in li{ display:inline; float:left; height:30px; margin-right:20px; line-height:30px;}
+.lg_in li label{ float:left; margin-right:5px; color:#6c6c6c;}
+.lg_in li input{ float:left; width:118px; margin:0 0 0 5px; padding:0; border:0; position:relative; top:6px;}
+.lg_in li input.text{ height:16px; padding-left:3px; line-height:16px; font-size:14px; border:1px solid #4f4f4f;}
+.lg_in li input.submit{ width:49px; height:21px; margin-left:0; cursor:pointer; background:url(../../images/recharge/btn_topLogin.gif) no-repeat; top:4px;}
+
+.login_mfzc{ float:left; margin:0;}
+.login_mfzc:hover{ color:#4874ff;}
+.lg_wel{ float:left; height:30px; line-height:30px;}
+.lg_wel a{ margin-right:10px;}
+
+.login_bind{ float:right;}
+.login_bind li{ display:inline; float:left; width:50px; height:30px; line-height:30px;}
+.login_bind li.lb_tit,.login_bind li.lb_bak{ width:65px;}
+.login_bind li.lb_tit a{ width:65px;}
+.login_bind li.lb_bak a{ color:#a96828;}
+.login_bind li a{ display:block; width:50px; position:relative;cursor: pointer;}
+.login_bind li a i{ display:inline-block; width:22px; height:20px; background:url(../../images/recharge/icon_topBind.gif) no-repeat; position:absolute; left:0; top:6px;}
+.login_bind li a i.weibo{ background-position:0 0;}
+.login_bind li a i.sina{ background-position:0 -20px;}
+.login_bind li a i.renren{ background-position:0 -40px;}
+.login_bind li a i.msg{ background-position:0 -60px;}
+.login_bind li a i.remind{ background-position:0 -80px;}
+
+#header_main{ height: 80px; border-bottom:1px solid #d7d7d7; }
+.header_mainBox{ height: 79px; border-bottom: 1px solid #fff;}
+#logo{ width: 225px; height: 58px; margin-top:12px; }
+#header_main .faq{  padding-top: 26px; text-align: right; line-height: 20px;}
+#header_main .faq a{color: #6288df;}
+#header_main .faq .user_info{ color: #000; border:0; box-shadow:none;}
+#header_main .faq .user_info strong{ color: #ee8100;}
+
+#mainNav{ height: 35px; background: url(../../images/recharge/bg_sprite.png) repeat-x 0 0;}
+#mainNav ul{ padding-left: 47px;}
+#mainNav li{ float: left; *display: inline; height: 35px; width:138px; text-align: center;}
+#mainNav li a{ display: inline-block;_display:inline;zoom:1; width: 138px; height: 30px; padding-top: 5px; font-size: 16px; color: #fff; font-family: "Microsoft Yahei"; line-height: 28px; overflow: hidden;}
+#mainNav li a.current{ background: url(../../images/recharge/bg_sprite.png) no-repeat 0 -35px; color: #be6c16;}
+
+/*===== Main Frame =====*/
+.main_box{ width: 954px; margin:0 auto; border:1px solid #e3e3e3; border-bottom:0 none;border-top:0 none; position: relative;}
+.crumb{ height: 30px; background: url(../../images/recharge/bg_sprite.png) repeat-x 0 -70px; line-height: 30px; color: #000;}
+.crumb a{ color: #000;}
+.crumb .cube{ display: inline-block; _display: inline; _zoom:1; width: 8px; height: 8px; background: #2f88cc; margin:0 4px 0 8px; }
+.aside_nav{ width: 185px; position: relative; margin-left: -1px;}
+.aside_nav dt{ height: 26px;border-bottom: 1px solid #cacccb; background: #ababab; color: #fff; line-height: 26px; text-indent: 32px;}
+.aside_nav dd{border: 1px solid #cacccb; border-top: 0 none; height: 49px;  font-size: 14px;  background: url(../../images/recharge/bg_sprite.png) repeat-x 0 -100px; position: relative;}
+.aside_nav .icon_syd{ width: 30px;height: 11px; display: block; position: absolute; top: 15px; left: 88px; background: url(../../images/recharge/icon_cjt.gif) no-repeat;}
+
+.aside_nav dd a{ display: inline-block; height: 49px; line-height: 49px; padding-left:42px; width:142px;color: #2c6084; text-decoration: none;}
+.aside_nav dd.current{ background-position: 0 -149px;}
+.aside_nav dd.current span{position: absolute;right: -20px; top: -1px; display: block; width: 20px; height: 51px;background: url(../../images/recharge/bg_sprite.png) no-repeat 0 -198px;}
+.aside_nav dd.current a{ font-weight: bold; color: #dc770a; background:url(../../images/recharge/bg_sprite.png) no-repeat -20px -198px;}
+.containBox{ background: #fff; width: 716px; padding: 13px 17px 20px 35px; min-height: 400px; height:auto!important; height:400px;}
+
+.containBox{ background: #fff; width: 716px; padding: 13px 17px 20px 35px; min-height: 700px; height:auto!important; height:700px;}
+
+/*===== Footer =====*/
+#footer{ border-top: 1px solid #e5e5e5;}
+.footer_wrap{ border-top: 1px solid #fff; height: 44px; background: #f5f5f5; text-align: center; line-height: 44px; color:#676767;}
+
+/*===== Index =====*/
+.index_banner{ width: 956px; height: 365px; position: relative; margin: 0 -1px;}
+.btn_indexRecharge{ display: block; width: 190px; height: 51px; position: absolute; top: 220px; left: 682px; background: url(../../images/recharge/btn_login.png) no-repeat 0 0; font-size: 0; line-height: 0;}
+.index_info{ padding:38px 0; }
+.index_info dl{ width: 165px; height: 112px; padding-left: 142px; padding-right: 10px; border-right: 1px solid #e1e0e0; position: relative; color: #2c6084;}
+.index_info dt{ padding-bottom: 10px; font-size: 14px;}
+.index_info dd{ font-size: 12px;}
+.index_info .more{ border-right: 0;}
+.index_info .icon{ position: absolute; left: 32px; top:14px; width: 81px; height: 63px; background: url(../../images/recharge/icon_sprite.png) no-repeat;}
+.index_info .ydcz .icon{ background-position:0 -126px; }
+.index_info .czfs .icon{ background-position:0 -63px; }
+.index_info .more .icon{ background-position:0 0; }
+.index_info .czfs span{ margin-right:18px; display:inline-block; line-height: 26px; _display: inline; _zoom:1; }
+.index_info .czfs span a{ color:#2C6084;}
+.index_info .czfs span a:hover{ color: #ff5500;}
+/*===== ydcz =====*/
+.con_title{line-height: 30px; font-size: 14px; color: #757474; border-bottom: 1px dashed #d5d5d5;}
+.con_title strong{ color: #ee8100; font-weight: bold;}
+.stepsBox{ height: 70px; position: relative;padding:20px 40px;}
+.stepsBox span,.stepsBox em,.stepsBox strong{ display: inline-block; *display: inline; *zoom:1; vertical-align: middle;}
+.stepsBox span,.stepsBox em{background:url(../../images/recharge/steps.png) no-repeat 0 -33px; position: relative;}
+.stepsBox .step4 em.fail{ background: url(../../images/recharge/charge_fail.png) no-repeat 0 0;}
+.stepsBox .step,.stepsBox .step em{ width: 33px; height: 33px; }
+.stepsBox .step em{ font-size:0; line-height:0;}
+.stepsBox .step1 em{ background-position:0 -67px; }
+.stepsBox .step2 em{ background-position:0 -101px; }
+.stepsBox .step3 em{ background-position:0 -132px; }
+.stepsBox .step4 em{ background-position:-2px -163px; }
+.stepsBox strong{ position: absolute; top:46px; width: 140px; left: -55px; text-align:center; height: 22px; line-height: 22px;}
+.stepsBox .arrow{ width: 93px; height: 33px; margin:0 13px; background-position:0 -198px; }
+.stepsBox span.current{ background-position:0 0; }
+.stepsBox span.current strong{ font-weight: bold; color:#f39612; font-weight: bold; font-size:14px;}
+.conList{position: relative;}
+.conList dt,.conList dd{ float: left; _display: inline;}
+.conList dt{width: 150px; height:30px; line-height: 30px; font-size: 14px; color: #989897; font-weight: bold; text-align: right;}
+
+.conList dd{line-height: 30px; vertical-align: middle; font-size: 14px; color: #747474; }
+.conList dd#account{ font-size: 12px; color: #000;}
+.conList dd strong{ font-size: 18px; color: #ff4300; font-weight: bold;}
+.conList dd label{ display: block; height: 30px; line-height: 30px; vertical-align: middle; font-size: 14px; color:#747474; margin-bottom: 6px;}
+.conList dd label span{ color:#9c9b9b; font-size: 12px; margin-left: 10px;}
+.conList dd label b{ line-height: 100%; font-size: 12px; color: #fff; font-weight: normal; display: inline-block; height: 14px; background: url(../../images/recharge/bg_sprite.png) no-repeat 0 -250px; position: relative; vertical-align: 5px; }
+.conList input{ vertical-align: middle;}
+.conList .input_radio{ margin-right: 14px;}
+.conList .input_text{height: 26px; line-height: 26px; border:1px solid #959594; font-size: 12px; color: #c1c1c1;  text-indent: 3px;}
+.conList .input_text:focus{ color: #666;}
+
+.conList dd .tips{ font-size: 12px;}
+
+
+.conList #otherMoney{ width: 90px; height: 26px; line-height: 26px; border:1px solid #959594; margin-left: 10px;}
+.conList .info_yd{ width: 146px; padding:0 20px; border-left: 1px solid #eaeaea; position: absolute; top: 0; right: 20px;}
+.conList .info_title{ line-height: 30px; font-size: 18px; border-bottom: 1px dashed #bcbcbb; text-align: center; color: #797978;}
+.conList .info_subTitle{ line-height: 24px; text-align: center; color: #797978;}
+.conList .info_detail{ color: #a2a2a2; line-height: 20px;}
+.stepsMain { padding-bottom:80px;}
+.stepsMain .btn_submit{ border:0 none; display: block; width: 133px; height: 34px; background: url(../../images/recharge/btn_add.png); clear: both; font-size: 0; line-height: 0; }
+
+.stepsMain .btn_submitPay{ background-position: 0 -85px; margin:20px 0 0 120px;}
+.stepsMain .successText { line-height: 25px; text-indent: 56px; background: url(../../images/recharge/smile.gif) 15px 0 no-repeat; font-size: 14px; color: #959494; margin-bottom: 50px;}
+.stepsMain .successText strong{ font-size: 16px; font-weight: bold; color: #ff4300; margin-right: 30px;}
+.stepsMain .successText em{font-size: 16px; font-weight: bold; font-style: normal;}
+.stepsMain .backHome{ color: #4079fb; margin-left: 30px;}
+
+#bindPhone{ width: 480px;height: 130px; margin: 0 auto 15px; padding:15px 40px; overflow: hidden; background: #f8f6f6; border:1px dotted #000; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius: 5px;}
+#bindPhone #sendPhoneNum{ width: 213px;}
+#bindPhone .getValidCode{ width: 84px; height: 28px; border: 0; background: url(../../images/recharge/btn_getValidCode.png) no-repeat; _display: inline-block; _display: inline; zoom:1; font-size: 12px; color: #242424; text-align: center; line-height: 28px; margin-left:10px; }
+#bindPhone .tips{ font-size: 12px;color: #949393; line-height: 20px;}
+#bindPhone .btn_ok{ border: 0; background: #ca7b0a; -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; height: 26px; line-height: 26px; width: 100px; display: inline-block;_display: inline;_zoom:1; font-size: 13px; color: #fff; margin-left:90px; }
+.btnchangeBind{ color: #001eff;}
+
+.winBox_content #bindPhone{ margin: 0 auto; padding:0; background: none; border: 0;}
+
+#ydqcz{ padding-left: 20px;}
+.ydqmsgBox{ margin-top: 50px; line-height: 26px; border: 1px solid #eaeaea; padding:0 12px; width: 425px; height: 52px; color: #818080;}
+.ydqmsgBox h6{ font-weight: bold; }
+.ydqmsgBox p{text-indent: 22px;}
+
+
+/*===== 闃呯偣绠＄悊 =====*/
+.account_Wrap{ border-bottom: 1px dashed #d5d5d5; padding-bottom: 38px; margin-left: -10px;}
+.userInfo{ width: 110px; margin-left: -17px;}
+.userInfo img{ width: 50px; height: 50px; display: block; margin: 0 auto; border: 1px solid #dcdcdc;}
+.userInfo p{ color: #0024ff; margin-top: 12px; line-height: 100%; text-align: center;}
+
+.account_mainBox{ width: 618px; position: relative; color: #757474; line-height: 24px;}
+.account_mainBox p strong{font-weight: bold;}
+.account_mainBox p b{ color: #ff0000; font-weight: bold;}
+.account_mainBox p em{ color: #be4605; font-weight: bold;}
+.account_mainBox a{ color: #0024ff;}
+.account_mainBox .ydDetail{ color: #989897;}
+.account_mainBox .ydDetail p span{ color: #bebebe;}
+.account_mainBox .arrowBtn{ display: inline-block; height: 24px; padding-right: 16px; background: url(../../images/recharge/up_down.png) no-repeat right 0; cursor: pointer;}
+.account_mainBox .dirUp{ background-position: right -24px;}
+.ydExpireList h3{ font-weight: bold; font-size: 14px; color: #9d6727;font-family: "Microsoft Yahei"; line-height: 36px;}
+.ydExpireList table{ width: 100%; text-align: center;}
+.ydExpireList table td,.ydExpireList table th{ text-align: center; border-bottom: 1px solid #afcadb; vertical-align: middle;}
+.ydExpireList table th{ height: 27px; background: #e2eef6; font-weight: bold;}
+.ydExpireList table td{ height: 25px;}
+
+.ydRechargeRecord h3,.recordList h3{ font-weight: bold; font-size: 14px; color: #9d6727;font-family: "Microsoft Yahei"; line-height: 36px;}
+.ydRechargeRecord table,.recordList table{ width: 100%; text-align: center;}
+.ydRechargeRecord table td,
+.ydRechargeRecord table th,
+.recordList table td,
+.recordList table th{ text-align: center;  vertical-align: middle;}
+.ydRechargeRecord table th,
+.recordList table th{ height: 28px; background: #e2eef6;font-weight: bold;}
+.ydRechargeRecord table td,
+.recordList table td{ height: 27px;border-bottom: 1px solid #e4edf3;}
+
+.recordList h3 {border-bottom: 1px dashed #D5D5D5; margin-bottom: 22px;}
+.recordList h3 span{ margin-left: 22px; font-size: 12px; font-weight: normal; color: #989897; vertical-align: bottom; font-family: "瀹嬩綋"}
+.recordList h3 span em{ font-weight: bold; color: #be4605;}
+
+.pageList{ padding: 25px 0; position: relative; text-align: center;}
+.pageList a,.pageList span{ display: inline-block; _display:inline; _zoom:1; line-height: 20px; margin:0 4px; color:#000000;}
+
+.btn_ydRecharge{ display: block; width: 133px; height: 34px; background: url(../../images/recharge/btn_sprite.png) no-repeat 0 -119px; font-size: 0; line-height: 0; position: absolute; top: 7px;right: 85px;}
+
+
+/*===== 绉垎 =====*/
+.pointExchange dl{ float: left; width: 140px; margin:0 50px 20px;}
+.pointExchange dl dt{ width: 140px;height: 88px;}
+.pointExchange dl dd{ text-align: center; font-size: 14px; line-height: 26px; color: #565655; font-family: "Microsoft Yahei";}
+.pointExchange dl dd button{ border: 0 none; display: block; margin:16px auto 0; width: 89px; height: 26px; background: url(../../images/recharge/btn_sprite.png) no-repeat 0 -153px; cursor: pointer; line-height: 0; font-size: 0;}
+.evenBg{ background: #fbfcfd;}
+
+/*===== WinBox Login =====*/
+#winBox_login{ width: 398px; height: 364px; padding: 1px; position: relative;}
+#winBox_login .bg{ width: 398px; height: 364px; border:1px solid #ccc; background: #fff; filter:alpha(opacity=80); -moz-opacity:0.8;-khtml-opacity: 0.8; opacity: 0.8; position: absolute; left: 0; top: 0; z-index: 0;}
+.winBox_loginMain{ z-index: 1; position: relative; color: #000;}
+#winBox_login .winBox_close{ width:24px; height:24px; top:-10px; right:-10px; background:url(../../images/recharge/close.png) no-repeat 0 0; z-index: 2;}
+.winBox_loginMain dl{/* padding-top: 45px;*/}
+.winBox_loginMain dt{ position: absolute; width:199px; height: 41px; top: -1px; background: #ededed; border: 1px solid #949394; border-bottom: 1px solid #bbbbbc; z-index: 0; text-align: center; line-height: 40px; font-size: 18px; color: #3f3f3f; font-size:18px; font-family: "Microsoft Yahei"; cursor: pointer;}
+.winBox_loginMain dl.tyRead dt{ left: -1px;}
+.winBox_loginMain dl.ty dt{ right: -1px;}
+.winBox_loginMain dt.current{ z-index: 1; border: 0 none; top: 0; background:none; color: #d14402;}
+.winBox_loginMain dl.tyRead{/* padding-top: 90px;*/}
+.winBox_loginMain dl.tyRead dd{ width: 330px; margin:0 auto;}
+.winBox_loginMain dl.tyRead label{ display: inline-block; width: 74px; text-align: right; font-size: 12px; color: #504f4e; _display: inline;_zoom:1; line-height: 21px; vertical-align: middle;}
+.winBox_loginMain input.input_text{ height: 21px; width: 250px; border: 1px solid #5777b5; line-height: 21px; vertical-align: middle; color: #9b9a9a;}
+.winBox_loginMain input.input_text:focus{ color:#333;}
+.winBox_loginMain dd.optionBox{ padding:15px 0; text-align: center;}
+.winBox_loginMain .getPwd a{ color: #935519;}
+.winBox_loginMain .agreement{ color: #9b9a9a;}
+.winBox_loginMain .agreement a{ color: #009df5;}
+.winBox_loginMain .errorTips{color:#ff2a00; display:block; text-indent:74px;}
+.winBox_loginMain dl.ty dd{ width:280px; height: 257px; margin:0 auto;}
+
+
+
+#winBox_login .other_login{ position: absolute; bottom:15px;height:32px; padding-left: 84px;}
+#winBox_login .other_login span,#winBox_login .other_login a{ float:left;}
+#winBox_login .other_login span{ margin:8px 5px 0 0;}
+#winBox_login .other_login a{ width:32px; height:32px; margin-right:8px;}
+#winBox_login .other_login a.other_login_sina{ background:url(../../images/user/other-login-sina.png) no-repeat center;}
+#winBox_login .other_login a.other_login_qq{ background:url(../../images/user/other-login-qq.png) no-repeat center;}
+#winBox_login .other_login a.other_login_rr{ background:url(../../images/user/other-login-rr.png) no-repeat center;}
+
+/*===== WinBox Confirm =====*/
+#winBox_confirm{ border:1px solid #dcdcdc; -moz-border-radius: 5px; -webkit-border-radius: 5px;border-radius: 5px; padding: 1px; box-shadow:2px 2px 3px #777; position: relative; background: url(../../images/recharge/bg_winbox.gif) repeat-x bottom #fff; min-height: 174px; height:auto!important; height:174px;}
+.winBox_title{ height: 35px; line-height:34px; background: #ede0d3; font-weight:bold; color: #a96828;text-indent: 16px;}
+.winBox_content{ padding: 10px 20px; color: #666664; line-height: 24px;}
+.winBox_btnBox a{ height: 30px; padding: 0 20px; -moz-border-radius: 3px; -webkit-border-radius: 3px;border-radius: 3px; display: inline-block; _display: inline; _zoom:1; text-decoration: none; vertical-align: middle; font-weight: bold; text-align: center; line-height: 30px; margin:0 12px;}
+.winBox_btnBox .btn_style1{ background: #a96828; color: #fff;}
+.winBox_btnBox .btn_style2{ background: url(../../images/recharge/bg_sprite.png) repeat-x 0 -100px; border:1px solid #a8a8a8; height: 28px; line-height: 28px; color: #a96828;}
+.winBox_btnBox{ text-align: center; padding: 15px 0;}
+.winBox_close{ font-size: 14px; display: block; width: 16px; height: 16px; line-height: 16px; overflow: hidden; position: absolute; right: 3px; top: 4px; color: #a96828; cursor: pointer;}
+.oneLineText{ line-height:50px; font-size:17px; text-align:center; font-family: 'Microsoft Yahei';}
+
+.help_content{ font-size: 14px;line-height: 30px; /*padding-right: 40px;*/}
+.help_content dl{ margin-bottom:10px;}
+.help_content dl dt{ font-weight:bold;}
+
+
+.info_yd .notice{ margin-top:-60px; width:134px;height: 178px; padding:7px; font-size:12px; line-height:20px; color:#898787; border:1px dashed #E5E5E5; background:#fdfdfd;}
+.info_yd .notice span{ color:#c60509;}
+
+
+.hd_cj_desc{ padding-top: 10px; font-size: 12px;text-align: left;line-height: 20px;  color: #898787;}
+.hd_cj_desc p{font-size: 12px; line-height: 20px; padding-left: 12px; text-indent: -12px; text-align: left;}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tyyd.scheduler.dao.JobDao">
+	<insert id="saveJobInfo" parameterType="JobInfo">
+		INSERT INTO `job`(
+		`cpName`, `createTime`, `modifyTime`, `readTime`,
+		`flag`,
+		`timeExpress`, `path`, `extendsInfo`, `channel`)
+		VALUES
+		(#{cpName},#{createTime},#{modifyTime},#{readTime},#{flag},#{timeExpress},#{path},#{extendsInfo},#{channel})
+	</insert>
+
+
+	<select id="getJobInfo" parameterType="JobInfo" resultType="JobInfo">
+		SELECT `id` as id, `cpName` as cpName, `createTime` as createTime, `modifyTime` as modifyTime, `readTime` as readTime, `flag` as flag,
+		`timeExpress` as timeExpress, `path` as path, `extendsInfo` as extendsInfo, `channel` as channel FROM `job` 
+		<trim prefix="WHERE" prefixOverrides="AND | OR">
+			<if test="id != null">
+				id = #{id}
+			</if>
+		</trim>
+	</select>
+
+	<select id="getJobList" parameterType="JobInfo" resultType="java.util.HashMap">
+		SELECT `id` as id, `cpName` as cpName, `createTime` as createTime, `modifyTime` as modifyTime, `readTime` as readTime, `flag` as flag,
+		`timeExpress` as timeExpress, `path` as path, `extendsInfo` as extendsInfo, `channel` as channel FROM `job` 
+	</select>
+
+	<update id="updateJobInfo" parameterType="JobInfo">
+		UPDATE `job`
+		<trim prefix="SET" suffixOverrides=",">
+			<if test="cpName != null">
+				cpName = #{cpName},
+			</if>
+			<if test="createTime != null">
+				createTime = #{createTime},
+			</if>
+			<if test="modifyTime != null">
+				modifyTime = #{modifyTime},
+			</if>
+			<if test="readTime != null">
+				readTime = #{readTime},
+			</if>
+			<if test="flag != null">
+				flag = #{flag},
+			</if>
+			<if test="timeExpress != null">
+				timeExpress = #{timeExpress},
+			</if>
+			<if test="path != null">
+				path = #{path},
+			</if>
+			<if test="extendsInfo != null">
+				extendsInfo = #{extendsInfo},
+			</if>
+			<if test="channel != null">
+				channel = #{channel},
+			</if>
+		</trim>
+		<trim prefix="WHERE" prefixOverrides="AND | OR">
+			<if test="id != null">
+				id = #{id}
+			</if>
+		</trim>
+	</update>
+</mapper>

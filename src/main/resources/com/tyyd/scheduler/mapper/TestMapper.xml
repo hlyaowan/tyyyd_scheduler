@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tyyd.pay.dal.dao.order.IOrderDAO">
+	<insert id="saveOrderInfo" parameterType="OrderInfo"> INSERT INTO
+		ORDER_INFO(COST_RESULT,`TIMESTAMP`,COST_TYPE,CLIENT_TYPE,APP_ID,COST_AMOUNT,PAY_TYPE,USER_ID,USER_MOBILE,BOOK_ID,COL_ID,ORDER_NO,`STATUS`,CREATE_TIME,CHAPTER_ID)
+		VALUES(#{resultCode},#{timestamp},#{costType},#{clientType},#{clientId},#{costAmount},#{payType},#{userId},#{userMobile},#{bookId},#{colId},#{orderNo},#{status},#{createTime},#{chapterId})
+	</insert>
+
+	<update id="updateOrderInfo" parameterType="OrderInfo">
+		UPDATE ORDER_INFO
+		<trim prefix="SET" suffixOverrides=",">
+			<if test="resultCode != null">
+				COST_RESULT = #{resultCode},
+			</if>
+			<if test="costTime != null">
+				COST_TIME = #{costTime},
+			</if>
+		</trim>
+		<trim prefix="WHERE" prefixOverrides="AND | OR">
+			<if test="orderNo != null">
+				ORDER_NO = #{orderNo}
+			</if>
+			<if test="status != null">
+				AND STATUS = #{status}
+			</if>
+		</trim>
+	</update>
+
+	<select id="getOrderInfo" parameterType="OrderInfo" resultType="OrderInfo">
+		SELECT ID AS id,`TIMESTAMP` AS
+		`timestamp`,COST_TYPE AS costType,CLIENT_TYPE AS clientType,APP_ID
+		AS
+		clientId,COST_AMOUNT AS costAmount,PAY_TYPE AS payType,USER_ID AS
+		userId,USER_MOBILE AS userMobile,BOOK_ID AS bookId,COL_ID AS
+		colId,ORDER_NO AS orderNo,`STATUS` AS `status`,CREATE_TIME AS
+		createTime,COST_TIME AS costTime,CHAPTER_ID AS
+		chapterId FROM
+		ORDER_INFO
+		<trim prefix="WHERE" prefixOverrides="AND | OR">
+			<if test="orderNo != null ">
+				ORDER_NO = #{orderNo}
+			</if>
+			<if test="status != null ">
+				AND STATUS = #{status}
+			</if>
+		</trim>
+	</select>
+</mapper>

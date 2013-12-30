@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>天翼阅读,开卷有翼 - 充值中心</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link type="text/css" href="css/public.css" rel="stylesheet" />
+<link type="text/css" href="css/recharge/global.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/recharge/cz_global.js"></script>
+<script type="text/javascript" src="js/recharge/cz_login.js"></script>
+</head>
+<body>
+<div id="header">
+  #if($userInfo)
+<!--充值中心 头文件 -->
+  <div id="header_top">
+    <div class="wrap">
+      <div class="login">
+        <div style=" width:100px; float:left;height: 30px;line-height: 30px;"><a href="http://read.189.cn">天翼首页</a>&nbsp;</div>
+        <ul class="lg_in">
+          <li>
+            <label>欢迎你<font color="red">${userInfo.userName}</font>登录数据调度管理平台！</label>
+          </li>
+          
+        </ul>
+        <div class="lg_wel"></div>
+      </div>
+      <ul class="login_bind">
+        <li class="lb_bak"><a href="${rc.contextPath}/loginOut.htm">退出系统</a></li>
+        <li class="lb_tit">快捷登录:</li>
+        <li><a class="sinaLogin" title="新浪"><i class="weibo"></i> </a></li>
+        <li><a class="tencentLogin" title="腾讯"><i class="sina"></i> </a> </li>
+        <li><a class="renrenLogin" title="人人"><i class="renren"></i> </a> </li>
+      </ul>
+    </div>
+  </div>
+  #end
+  <div id="header_main">
+    <div class="header_mainBox clearfix">
+      <div class="wrap clearfix">
+        <h1 class="fl" id="logo"><img src="${rc.contextPath}/images/recharge/logo.png" alt="天翼阅读充值中心"></h1>
+        <p class="fr faq"> <a href="help.html">系统遇到问题？</a><br>
+          <span class="user_info" id="balance"></span> </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mainNav" class="wrap">
+  <!--充值中心 -菜单-->
+  <ul class="clearfix">
+   <li><a href="${rc.contextPath}/index.htm" class="current">数据调度首页</a></li>
+    <li><a href="${rc.contextPath}/admin/manage.htm">数据调度管理</a></li>
+    <li><a href="#">数据调度概况</a></li>
+    <li><a href="#">服务管理</a></li>
+  </ul>
+</div>
+<div class="main_box clearfix">
+  <div class="crumb"> <span class="cube"></span>您的位置：<a href="http://read.189.cn">天翼阅读首页</a>&gt;&gt;<a href="alipay.html">帮助</a>&gt;&gt;
+    系统遇到问题 </div>
+  <div class="containBox" style="width:auto; padding:13px 30px 20px">
+    <div class="recordList">
+      <h3>系统遇到问题</h3>
+      <div class="help_content">
+        <dl>
+          <dt>1、充值中心有哪些功能？</dt>
+          <dd>答：用户来到天翼阅读充值中心，可以对自己的天翼阅读账户进行充值，目前我们提供的充值方式有支付宝、短信、翼支付、阅点券、手机充值卡等方式，您可以根据您的情况选择适合自己的方式充值。用户还可以查看自己账户中的阅点余额、积分余额、购买记录、充值记录、积分兑换等功能。</dd>
+        </dl>
+        <dl>
+          <dt>2、什么是阅点？如何获取？</dt>
+          <dd>答：阅点是天翼阅读平台的虚拟货币单位，天翼阅读用户可以通过阅点消费点播、包月等天翼阅读旗下各类数字阅读产品。目前阅点获取只能通过阅点券、支付宝、翼支付、短信、手机充值卡充值。</dd>
+        </dl>
+        <dl>
+          <dt>3、如何使用支付宝充值天翼阅读的阅点？</dt>
+          <dd>答：支付宝充值是天翼阅读阅点第三方充值形式之一。用户可登陆天翼阅读充值中心平台，找到“支付宝充值”即可充值。</dd>
+        </dl>
+        <dl>
+          <dt>4、选择手机短信充值方式需要哪些特别注意的地方？</dt>
+          <dd>答：短信充值是指用户通过短信代扣来进行充值阅点。用户为电信手机用户，短代支付号码是本机号码，用户名和邮箱用户以及异网用户需要先与电信手机号码绑定后才可以继续充值流程。</dd>
+        </dl>
+        <dl>
+          <dt>5、如何使用翼支付充值？</dt>
+          <dd>答：翼支付是中国电信自有充值平台，用户可以登录天翼阅读充值中心平台，找到“翼支付”即可充值。</dd>
+        </dl>
+        <dl>
+          <dt>6、如何使用阅点券充值？</dt>
+          <dd>答：您可以将阅点券内的金额，通过阅点券充值的支付渠道进行账户充值。用户可登陆天翼阅读充值中心平台，找到“阅点券充值”即可充值。<br>
+            阅点券充值不成功有以下几种情况：<br>
+            【1】请确认您输入的13位阅点券号和密码正确，否则会导致支付不成功；<br>
+            【2】请确认您的阅点券是否已经过期；<br>
+            【3】请确认您的阅点券之前是否已经使用过；</dd>
+        </dl>
+        <dl>
+          <dt>7、 支付不显示怎么办</dt>
+          <dd>答：如果支付后，没有显示可能是以下几种原因：<br>
+            【1】您的支付过程没有完成；<br>
+            【2】系统稍有延迟，请刷新后，点击我的账户查看阅点余额；<br>
+            【3】联系客服进行处理，客服电话：400-8263-114。 </dd>
+        </dl>
+        <dl>
+          <dt>8、如何查询阅点是否充值成功？</dt>
+          <dd>答：点击“阅点管理”，选择“充值记录”，成功充值的记录会在充值记录明细中显示。</dd>
+        </dl>
+        <dl>
+          <dt>9、短信充值时，已经提示充值成功，为什么阅点没有到账户？</dt>
+          <dd>答：2013年7月23日起，短信充值功能内部流程在做升级部署，造成充值及扣费成功而阅点没有到账的现象， 请联系客服将为您做处理，谢谢。</dd>
+        </dl>
+        <dl>
+          <dt>10、短信充值时，已经扣费了，为什么阅点没有到账户？</dt>
+          <dd>答：2013年7月23日起，短信充值功能内部流程在做升级部署，造成充值及扣费成功而阅点没有到账的现象， 请联系客服将为您做处理，谢谢。</dd>
+        </dl>
+        <br>
+        <br>
+        <br>
+        在线客服<br>
+        QQ客服：4008263114<br>
+        服务热线：4008263114<br>
+        189邮件客服：readkefu@189.cn </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <!-- 充值中心 -脚-->
+  <div class="footer_wrap"> 版权所有(&copy;) 2012 天翼阅读文化传播有限公司 </div>
+</div>
+</body>
+</html>

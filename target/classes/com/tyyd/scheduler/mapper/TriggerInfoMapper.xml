@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tyyd.scheduler.dao.TriggerDao">
+	<select id="getTriggerList" parameterType="TriggerInfo"
+		resultType="java.util.HashMap">
+		SELECT `TRIGGER_NAME` as triggerName, `TRIGGER_GROUP` as
+		triggerGroup, `JOB_NAME` as jobName,
+		`JOB_GROUP` as jobGroup,
+		`DESCRIPTION` as description, `NEXT_FIRE_TIME` as nextFireTime,
+		`PREV_FIRE_TIME` as prevFireTime, `PRIORITY` as priority,
+		`TRIGGER_STATE` as triggerState, `TRIGGER_TYPE` as triggerType,
+		`START_TIME` as startTime, `END_TIME` as endTime
+		FROM `qrtz_triggers`
+	</select>
+</mapper>
