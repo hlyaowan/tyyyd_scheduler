@@ -13,8 +13,8 @@ public class Constant {
 	
 	public static final Map<String,String> status = new HashMap<String,String>();
 	static{
-		status.put("ACQUIRED", "运行中");
-		status.put("PAUSED", "暂停中");
-		status.put("WAITING", "等待中");		
+		status.put("ACQUIRED", "<img src='/images/run.png'>");
+		status.put("PAUSED", "<img src='/images/stop.png'>");
+		status.put("WAITING", "<img src='/images/wait.gif' width='20px' height='20px'>");		
 	}
 }

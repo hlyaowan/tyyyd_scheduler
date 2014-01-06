@@ -56,7 +56,7 @@ public class TriggerServiceImpl implements TriggerService{
               map.put("endTime", DateFormatUtils.format(val, "yyyy-MM-dd HH:mm:ss"));
           }
           
-          map.put("triggerState",Constant.status.get(MapUtils.getString(map, "triggerState")));
+          map.put("state",Constant.status.get(MapUtils.getString(map, "triggerState")));
       }
         return list;
     }
