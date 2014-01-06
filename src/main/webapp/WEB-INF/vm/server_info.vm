@@ -99,6 +99,18 @@
             <td>cpu信息核心数</td>
             <td class="border_left">${os_cpus}</td>
           </tr>
+		  <tr>
+            <td>服务器Ip</td>
+            <td class="border_left">${ip}</td>
+          </tr>
+		  <tr>
+            <td>服务器端口</td>
+            <td class="border_left">${port}</td>
+          </tr>
+		  <tr>
+            <td>内存信息</td>
+            <td class="border_left">${memory}</td>
+          </tr>
         </table>
         <p style="margin-top:20px;">说明：请求服务器的相关的参数和应用场景。</p>
       </div>
