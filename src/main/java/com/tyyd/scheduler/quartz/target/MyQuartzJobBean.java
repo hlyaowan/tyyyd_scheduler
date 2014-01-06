@@ -5,12 +5,8 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.quartz.Scheduler;
 import org.quartz.Trigger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 import org.springframework.stereotype.Component;
-
-import com.tyyd.scheduler.quartz.GuqiangJob;
-import com.tyyd.scheduler.service.JobService;
 
 @Component
 public class MyQuartzJobBean extends QuartzJobBean {
