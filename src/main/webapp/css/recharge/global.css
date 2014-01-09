@@ -310,3 +310,26 @@ body {background: url(../../images/recharge/bg_body.jpg); word-wrap:break-word; 
 
 .hd_cj_desc{ padding-top: 10px; font-size: 12px;text-align: left;line-height: 20px;  color: #898787;}
 .hd_cj_desc p{font-size: 12px; line-height: 20px; padding-left: 12px; text-indent: -12px; text-align: left;}
+
+.btn-blue {
+vertical-align: middle;
+font-size: 17px;
+color: #FFF;
+text-align: center;
+height: 34px;
+line-height: 34px;
+display: inline-block;
+border-radius: 5px;
+background: #297DCF;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2781D3), color-stop(100%,#2A79CC));
+padding: 0 12px;
+border: 0 none;
+border-bottom: 2px solid #0B3D71;
+}
+
+.btn-small {
+height: 28px;
+font-size: 15px;
+line-height: 28px;
+width:20px;padding:0;
+}
